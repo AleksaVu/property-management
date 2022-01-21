@@ -88,8 +88,8 @@ class Property:
             print(
                 f' Property with id {self.id} is not available.')
 
-    # Mozda ovo da napravim drug klasu npr. PropertyListing koja nasljedjuje property
-    # i da tamo premjestim dolje metode, pa da napravim par funkcija sa sortiranjem
+    # Mozda ovo da napravim drugu klasu npr. PropertyListing koja nasljedjuje property
+    # i da tamo premjestim donje metode, pa da napravim par funkcija sa sortiranjem
     # sort by price, availability, city ... ?
     def show_all_properties(self):
         self.cursor.execute(""" SELECT * FROM properties""")
@@ -120,9 +120,6 @@ class Property:
         rows = self.cursor.fetchall()
         print(rows)
         return rows
-
-    # def __repr__(self):
-    #     return f'{self.id}'
 
     def close_conn(self):
         self.conn.close()

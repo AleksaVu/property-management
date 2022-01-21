@@ -1,4 +1,3 @@
-#import sqlite3
 from models import Property
 from models import Agent
 
